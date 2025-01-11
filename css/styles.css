@@ -1,3 +1,8 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -44,5 +49,5 @@ nav > a {
 }
 
 footer {
-    text-align: center;
+   text-align: center;
 }
