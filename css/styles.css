@@ -3,17 +3,16 @@ body {
     background-color: aliceblue;
 }
 
-.main-header {
+.header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-icon {
+.logo {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
     background-size: cover;
     background-position: center;
 }
@@ -50,4 +49,28 @@ nav > a {
 
 footer {
    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 14px;
+    }
+
+    .left-rounded {
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .right-rounded {
+        border-radius: 0 0 12px 12px;
+    }
 }
