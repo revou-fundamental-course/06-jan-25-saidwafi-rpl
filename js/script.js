@@ -1,13 +1,36 @@
-function validateForm() {
-  let nameInput = document.getElementById("name-input").value;
+const userGreeting = document.getElementById("user-greeting");
 
-  console.log(nameInput);
-  if (nameInput == "") {
-    alert("Nama tidak boleh kosong!");
+// Cek apakah nama sudah disimpan di Local Storage
+let userName = localStorage.getItem("userName");
+
+// Minta pengguna untuk memasukkan nama panggilan jika belum ada
+if (!userName) {
+  userName = prompt("Masukan nama panggilan anda:");
+  if (userName) {
+    localStorage.setItem("userName", userName);
   } else {
-    // Result form
-    document.getElementById("result-form").innerHTML = nameInput;
+    userName = "Pengunjung";
   }
+}
+
+// Tampilkan nama di website
+userGreeting.textContent = userName;
+
+// Fungsi memvalidasi form
+function validateForm() {
+  const name = document.forms["message-form"]["full-name"].value;
+  const birthDate = document.forms["message-form"]["birth-date"].value;
+  const gender = document.forms["message-form"]["gender"].value;
+  const messages = document.forms["message-form"]["messages"].value;
+
+  if (name == "" || birthDate == "" || gender == "" || messages == "") {
+    alert("Tidak boleh ada yang kosong");
+    return false;
+  }
+
+  setSenderUI(name, birthDate, gender, messages);
+
+  return false;
 }
 
 document.getElementById("submit-btn").addEventListener("click", validateForm);
