@@ -79,7 +79,7 @@ nav>a.active {
     background-position: bottom;
 }
 
-.our-profile {
+.profile {
     height: 300px;
     display: flex;
     justify-content: space-evenly;
