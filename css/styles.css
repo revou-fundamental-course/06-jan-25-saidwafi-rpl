@@ -37,21 +37,21 @@ nav > a {
 }
 
 .banner-image {
-    height: 450px;  
+    height: 600px;  
     background-size: cover;
     background-position: bottom;
 }
 
 .banner-image-1 {
-    background-image: url(https://picsum.photos/500);
+    background-image: url(https://i.pinimg.com/736x/44/94/d9/4494d9f9d91f5f3ff839a787f3a7810e.jpg);
 }
 
 .banner-image-2 {
-    background-image: url(https://picsum.photos/501);
+    background-image: url(https://i.pinimg.com/736x/c6/a8/5b/c6a85bd2f517869e35ce0ece3ace8105.jpg);
 }
 
 .banner-image-3 {
-    background-image: url(https://picsum.photos/502);
+    background-image: url(https://i.pinimg.com/736x/83/c3/23/83c323caee31b33e5071fdab604ba1f8.jpg);
 }
 
 .form-group {
