@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="css\styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
@@ -36,7 +36,7 @@
           </h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </header>
-        
+
         <div class="banner-image banner-image-1"></div>
         <div class="banner-image banner-image-2"></div>
         <div class="banner-image banner-image-3"></div>
@@ -51,9 +51,9 @@
           <h1>Our Profile</h1>
         </header>
         <div class="profile">
-          <img class="profile-1" src="assets/our-profile-1.jpg" alt="logo-s">
-          <img class="profile-2" src="assets/our-profile-2.jpg" alt="logo-w">
-          <img class="profile-3" src="assets/our-profile-3.jpg" alt="logo-l">
+          <img class="profile-1" src="assets/our-profile-1.jpg" alt="logo-s" />
+          <img class="profile-2" src="assets/our-profile-2.jpg" alt="logo-w" />
+          <img class="profile-3" src="assets/our-profile-3.jpg" alt="logo-l" />
         </div>
       </section>
 
@@ -69,34 +69,46 @@
         <div class="form-content" id="form-input">
           <form name="message-form" onsubmit="return validateForm()">
             <div class="form-group">
-              Nama: <input placeholder="Nama" type="text" name="full-name" />
+              <label for="full-name">Nama:</label>
+              <input
+                id="full-name"
+                placeholder="Nama"
+                type="text"
+                name="full-name"
+              />
             </div>
+
             <div class="form-group">
-              Tanggal Lahir:
-              <input type="date" name="birth-date" />
+              <label for="birth-date">Tanggal Lahir:</label>
+              <input id="birth-date" type="date" name="birth-date" />
             </div>
+
             <div class="form-group">
-              Jenis Kelamin:
+              <label>Jenis Kelamin:</label>
               <input type="radio" id="male" name="gender" value="Laki-laki" />
               <label for="male">Laki-laki</label>
               <input type="radio" id="female" name="gender" value="Perempuan" />
               <label for="female">Perempuan</label>
             </div>
+
             <div class="form-group">
-              Pesan: 
-              <textarea placeholder="Pesan" name="messages"></textarea>
-              <br />
+              <label for="messages">Pesan:</label>
+              <textarea
+                id="messages"
+                placeholder="Pesan"
+                name="messages"
+              ></textarea>
             </div>
 
             <button type="button" id="submit-btn">Submit</button>
           </form>
+        </div>
 
-          <div class="form-content" id="result-form">
-            <p>Nama: <span id="sender-full-name"></span></p>
-            <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
-            <p>Jenis Kelamin: <span id="sender-gender"></span></p>
-            <p>Pesan: <span id="sender-messages"></span></p>
-          </div>
+        <div class="form-content" id="result-form">
+          <p>Nama: <span id="sender-full-name"></span></p>
+          <p>Tanggal Lahir: <span id="sender-birth-date"></span></p>
+          <p>Jenis Kelamin: <span id="sender-gender"></span></p>
+          <p>Pesan: <span id="sender-messages"></span></p>
         </div>
       </section>
     </main>
